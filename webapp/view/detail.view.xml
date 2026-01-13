@@ -1,0 +1,100 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:t="sap.ui.table"
+    controllerName="so.app.controller.detail"
+>
+    <f:DynamicPage
+        id="detailPage"
+        headerExpanded="true"
+        toggleHeaderOnTitleClick="true"
+    >
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="{parts : [{path: 'to_Description'}],
+                               formatter: '.formatter.formatDescription'
+                               } "
+                        class="sapUiSmallMarginBegin"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label
+                        text="{Product}"
+                        class="sapUiSmallMarginBegin"
+                    />
+                </f:expandedContent>
+                <f:actions>
+                    <Button
+                        text="Edit"
+                        type="Emphasized"
+                        press="onEdit"
+                    />
+                </f:actions>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <core:Fragment
+                                    fragmentName="so.app.fragments.headerDetail"
+                                    type="XML"
+                                />
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <layout:VerticalLayout>
+                <IconTabBar
+                    id="iconTabBar"
+                    headerBackgroundDesign="Transparent"
+                    select="onTabSelect"
+                >
+                    <items>
+                        <IconTabFilter
+                            id="iconTabFilterInfo"
+                            icon="sap-icon://information"
+                            tooltip="More Information"
+                        >
+                            <core:Fragment
+                                fragmentName="so.app.fragments.moreinfo"
+                                type="XML"
+                            />
+                        </IconTabFilter>
+                        <IconTabFilter
+                            id="iconTabFilterSupplier"
+                            icon="sap-icon://factory"
+                            tooltip="Plant"
+                        >
+                            <core:Fragment
+                                fragmentName="so.app.fragments.otherinfo"
+                                type="XML"
+                            />
+                        </IconTabFilter>
+                    </items>
+                </IconTabBar>
+                    <core:Fragment
+                        fragmentName="so.app.fragments.UOM"
+                        type="XML"
+                    />
+            </layout:VerticalLayout>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

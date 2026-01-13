@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:t ="sap.ui.table"
+    xmlns:core="sap.ui.core"
+>
+    <IconTabFilter
+        id="iconTabFilterEditid"
+        icon="sap-icon://legend"
+        tooltip="Description"
+    >
+        <VBox>
+            <t:Table
+                rows="{to_Description}"
+                id="description"
+                selectionMode="Single"
+                visibleRowCount="1"
+            >
+                <t:extension>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Descriptions" />
+                    </OverflowToolbar>
+                </t:extension>
+                <t:columns>
+                    <t:Column width="11rem">
+                        <Label text="Language" />
+                        <t:template>
+                            <Text
+                                text="{Language}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="25rem">
+                        <Label text="Description" />
+                        <t:template>
+                            <Input value="{ProductDescription}" />
+                        </t:template>
+                    </t:Column>
+                </t:columns>
+            </t:Table>
+        </VBox>
+    </IconTabFilter>
+</core:FragmentDefinition>

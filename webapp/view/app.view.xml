@@ -1,0 +1,16 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    controllerName="so.app.controller.app"
+>
+    <App
+        id="appid"
+    >
+        <f:FlexibleColumnLayout
+            id="layout"
+            layout="TwoColumnsMidExpanded"
+            backgroundDesign="Translucent"
+        />
+    </App>
+</mvc:View>

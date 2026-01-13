@@ -1,0 +1,57 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+>
+    <VBox
+        width="100%"
+        fitContainer="true"
+    >
+        <form:SimpleForm
+            id="headerForm"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            adjustLabelSpan="true"
+        >
+            <layout:HorizontalLayout allowWrapping="true">
+                <layout:VerticalLayout>
+                    <ObjectAttribute
+                        title="Product Type"
+                        text="{ProductType}"
+                    />
+                    <ObjectAttribute
+                        title="Product Group"
+                        text="{ProductGroup}"
+                    />
+                    <ObjectAttribute
+                        title="User"
+                        text="{CreatedByUser}"
+                    />
+                </layout:VerticalLayout>
+                <layout:VerticalLayout>
+                    <Label
+                        text="Weight"
+                        class="sapUiMediumMarginBegin"
+                    />
+                    <ObjectNumber
+                        number="{GrossWeight}"
+                        unit="{WeightUnit}"
+                        class="sapUiMediumMarginBegin"
+                    />
+                </layout:VerticalLayout>
+                <layout:VerticalLayout>
+                    <ObjectAttribute
+                        title="Availability"
+                        class="sapUiMediumMarginBegin"
+                    />
+                    <ObjectStatus
+                        text="In Stock"
+                        state="Success"
+                        class="sapUiMediumMarginBegin"
+                    />
+                </layout:VerticalLayout>
+            </layout:HorizontalLayout>
+        </form:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

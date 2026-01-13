@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+> 
+            <form:SimpleForm
+                id="moreInfoFormedit"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="More Information"
+            >
+                <form:content>
+                    <Label text="Marked for Deletion" />
+                    <Input value="{IsMarkedForDeletion}" />
+                    <Label text="Width" />
+                    <Input value="{MaximumPackagingWidth}" />
+                    <Label text="Depth" />
+                    <Input value="{MaximumPackagingLength}" />
+                    <Label text="Height" />
+                    <Input value="{MaximumPackagingHeight}" />
+                </form:content>
+            </form:SimpleForm>
+      
+</core:FragmentDefinition>

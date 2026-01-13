@@ -1,0 +1,51 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+>
+    <VBox width="100%">
+        <form:SimpleForm
+            id="createForm"
+            layout="ResponsiveGridLayout"
+            editable="true"
+            title="Enter Product Details"
+            adjustLabelSpan="true"
+        >
+            <form:content>
+                <HBox id="box1">
+                    <layoutData>
+                        <layout:GridData span="L12 M12 S12" />
+                    </layoutData>
+                    <VBox width="50%" class="sapUiMediumMarginEnd">
+                        <Label text="Product ID:" required="true" />
+                        <Input value = "{local>/data/Product}" />
+                        <Label text="Product Type:" class="sapUiSmallMarginTop" required="true" />
+                        <Input value = "{local>/data/ProductType}" required="true"/>
+                        <Label text="Base Unit:" required="true" class="sapUiSmallMarginTop"/>
+                        <Input value = "{local>/data/BaseUnit}" />
+                    </VBox>
+                    <VBox width="50%">
+                        <Label text="Net Weight:"/>
+                        <Input value = "{local>/data/NetWeight}" />
+                        <Label text="Gross Weight:" class="sapUiSmallMarginTop" />
+                        <Input value = "{local>/data/GrossWeight}" />
+                        <Label text="Weight Unit:" class="sapUiSmallMarginTop" />
+                        <Input value = "{local>/data/WeightUnit}" />
+                    </VBox>
+                </HBox>
+
+                <Label text="Description">
+                    <layoutData>
+                        <layout:GridData span="L12 M12 S12" />
+                    </layoutData>
+                </Label>
+                <Input value="{local>/data/to_Description/0/ProductDescription}" width="100%" required="true">
+                    <layoutData>
+                        <layout:GridData span="L12 M12 S12" />
+                    </layoutData>
+                </Input>
+            </form:content>
+        </form:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

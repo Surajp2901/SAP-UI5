@@ -1,0 +1,98 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:t="sap.ui.table"
+    controllerName="so.app.controller.edit"
+>
+    <f:DynamicPage
+        id="EditPage"
+        headerExpanded="true"
+        toggleHeaderOnTitleClick="true"
+        showFooter="true"
+    >
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="{parts : [{path: 'to_Description'}],
+                               formatter: '.formatter.formatDescription'
+                               } "
+                        class="sapUiSmallMarginBegin"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label
+                        text="{Product}"
+                        class="sapUiSmallMarginBegin"
+                    />
+                </f:expandedContent>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <core:Fragment
+                                    fragmentName="so.app.fragments.headerDetail"
+                                    type="XML"
+                                />
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <VBox>
+                <IconTabBar
+                    id="iconTabBarid"
+                    headerBackgroundDesign="Transparent"
+                    select="onTabSelect"
+                >
+                    <items>
+                        <IconTabFilter
+                            id="iconTabFilterInfoid"
+                            icon="sap-icon://information"
+                            tooltip="More Information"
+                        >
+                            <core:Fragment
+                                fragmentName="so.app.fragments.moreinfoedit"
+                                type="XML"
+                            />
+                        </IconTabFilter>
+                        <core:Fragment
+                            fragmentName="so.app.fragments.descriptionedit"
+                            type="XML"
+                        />
+                    </items>
+                </IconTabBar>
+            </VBox>
+        </f:content>
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button
+                    type="Accept"
+                    text="Save"
+                    press="onSave"
+                />
+                <Button
+                    type="Reject"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

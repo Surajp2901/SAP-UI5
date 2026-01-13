@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <VBox width="100%" fitContainer="true">
+      
+            <form:SimpleForm
+                id="moreInfoForm"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                title="More Information"
+            >
+                <form:content>
+                    <Label text="Marked for Deletion" />
+                    <Text text="{IsMarkedForDeletion}" />
+                    <Label text="Width" />
+                    <Text text="{MaximumPackagingWidth} {UnitForMaxPackagingDimensions}" />
+                    <Label text="Depth" />
+                    <Text text="{MaximumPackagingLength} {UnitForMaxPackagingDimensions}" />
+                    <Label text="Height" />
+                    <Text text="{MaximumPackagingHeight} {UnitForMaxPackagingDimensions}" />
+                </form:content>
+            </form:SimpleForm>
+      
+    </VBox>
+</core:FragmentDefinition>

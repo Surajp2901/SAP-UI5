@@ -1,0 +1,70 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:t="sap.ui.table"
+>
+
+        <t:Table
+            rows="{to_ProductUnitsOfMeasure}"
+            id="uomTable"
+            selectionMode="MultiToggle"
+            visibleRowCount="6"
+            class="sapUiSmallMarginTop"
+            
+        >
+            <t:extension>
+                <OverflowToolbar style="Clear">
+                    <Title text="Unit of Measure" />
+                </OverflowToolbar>
+            </t:extension>
+            <t:columns>
+                <t:Column width="11rem">
+                    <Label text="Alternative Unit" />
+                    <t:template>
+                        <Text
+                            text="{AlternativeUnit}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column width="11rem">
+                    <Label text="Quantity Numerator" />
+                    <t:template>
+                        <Text
+                            text="{QuantityNumerator}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column width="11rem">
+                    <Label text="Quantity Denominator" />
+                    <t:template>
+                        <Text
+                            text="{QuantityDenominator}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column width="11rem">
+                    <Label text="GTIN" />
+                    <t:template>
+                        <Text
+                            text="{GlobalTradeItemNumber}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column width="11rem">
+                    <Label text="Base Unit" />
+                    <t:template>
+                        <Text
+                            text="{BaseUnit}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+</core:FragmentDefinition>

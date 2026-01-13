@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+
+        <form:SimpleForm
+            id="supplierForm"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            title="Other Information"
+            adjustLabelSpan="true"
+            emptySpanL="0"
+            emptySpanM="0"
+            columnsL="2"
+            columnsM="2"
+        >
+            <form:content>
+                <core:Title text="Create/Update Info" />
+                <Label text="Created By" />
+                <Text text="{CreatedByUser}" />
+                <Label text="Creation Date" />
+                <Text text="{CreationDate}" />
+                <Label text="Last Changed By" />
+                <Text text="{LastChangedByUser}" />
+                <Label text="Last Change Date" />
+                <Text text="{LastChangeDate}" />
+
+                <core:Title text="General" />
+                <Label text="Base Unit" />
+                <Text text="{BaseUnit}" />
+                <Label text="Division" />
+                <Text text="{Division}" />
+                <Label text="Material Volume" />
+                <Text text="{MaterialVolume}" />
+                <Label text="Industry Sector" />
+                <Text text="{IndustrySector}" />
+            </form:content>
+        </form:SimpleForm>
+</core:FragmentDefinition>

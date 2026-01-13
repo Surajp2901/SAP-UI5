@@ -1,0 +1,22 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns="sap.m"
+    controllerName="so.app.controller.master"
+>
+    <f:DynamicPage title="View Products">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Browse Products" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <Image
+                src="https://wallpaperaccess.com/full/1346726.jpg"
+                width="110%"
+            />
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

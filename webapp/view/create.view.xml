@@ -1,0 +1,47 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    controllerName="so.app.controller.create"
+>
+    <f:DynamicPage
+        id="createPage"
+        headerExpanded="true"
+        toggleHeaderOnTitleClick="true"
+        showFooter="true"
+    >
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="Create Product"
+                        class="sapUiSmallMarginBegin"
+                    />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <core:Fragment
+                fragmentName="so.app.fragments.createForm"
+                type="XML"
+            />
+        </f:content>
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button
+                    type="Accept"
+                    text="Save"
+                    press="onSave"
+                />
+                <Button
+                    type="Reject"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

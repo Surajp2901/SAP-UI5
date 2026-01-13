@@ -1,0 +1,18 @@
+{
+    "data": {
+        "Product": "TE-1003",
+        "ProductType": "FERT",
+        "ProductGroup": "L004",
+        "BaseUnit": "PC",
+        "GrossWeight": "5.1",
+        "WeightUnit": "KG",
+        "NetWeight": "5.5",
+        "to_Description": [
+            {
+                "Product": "",
+                "Language": "EN",
+                "ProductDescription": ""
+            }
+        ]
+    }
+}

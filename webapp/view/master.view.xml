@@ -1,0 +1,68 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    controllerName="so.app.controller.master"
+>
+    <f:DynamicPage
+        id="masterPage"
+        headerExpanded="true"
+        toggleHeaderOnTitleClick="true"
+        showFooter="true"
+    >
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Product List" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <VBox>
+                <SearchField
+                    id="searchid"
+                    search="onSearch"
+                    placeholder="Enter Product ID to search"
+                />
+                <List
+                    id="prodListID"
+                    itemPress="onItemPress"
+                    growing="true"
+                    growingThreshold="20"
+                    items="{
+                        path: '/A_Product',
+                        parameters: {expand: 'to_Description'},
+                        filters: [
+                                 {path: 'ProductGroup', operator:'EQ', value1: 'L004'}
+                                ]
+                        }"
+                    
+                >
+                    <items>
+                        <ObjectListItem
+                            type="Navigation"
+                            intro="{Product}"
+                            number="{GrossWeight}"
+                            numberUnit="{WeightUnit}"
+                            title="{
+                               parts : [{path: 'to_Description'}],
+                               formatter: '.formatter.formatDescription'
+                            }"
+                            busyIndicatorDelay="0"
+                        />
+                    </items>
+                </List>
+            </VBox>
+        </f:content>
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button
+                    type="Accept"
+                    text="Create"
+                    press="onCreate"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>
