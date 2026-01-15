@@ -54,7 +54,7 @@ sap.ui.define(
                     },
                     error: function (oError) {
                         oView.setBusy(false);
-                        MessageBox.error("Error creating product");
+                        MessageBox.error(JSON.parse(oError.responseText).error.innererror.errordetails[0].message);
                     }
                 });
 
