@@ -10,5 +10,5 @@ server:
       ignoreCertErrors: true
       backend:
       - path: /sap
-        url: https://my409395-api.s4hana.cloud.sap/
+        url: https://my413615.s4hana.cloud.sap/
         destination: S4H

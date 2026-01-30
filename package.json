@@ -2,6 +2,19 @@
     "name": "so.app",
     "version": "1.0.0",
     "dependencies": {
-        "@sap/ux-ui5-tooling": "^1.20.0"
+        "@sap/ux-ui5-tooling": "^1.20.1",
+        "@ui5/cli": "^4.0.42"
+    },
+    "scripts": {
+        "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
+        "build:mta": "rimraf resources mta_archives && mbt build",
+        "deploy": "fiori cfDeploy",
+        "undeploy": "cf undeploy soapp --delete-services --delete-service-keys --delete-service-brokers"
+    },
+    "devDependencies": {
+        "ui5-task-zipper": "^3.4.x",
+        "@ui5/cli": "^4.0.33",
+        "rimraf": "^5.0.5",
+        "mbt": "^1.2.29"
     }
 }

@@ -1,0 +1,2 @@
+sap.ui.define([],function(){return{formatDescription:function(r){this.OdataModel=this.getOwnerComponent().getModel();if(!r||!Array.isArray(r)||r.length===0){return""}var t=r.find(function(r){return r.includes("Language='EN'")});var e="/"+t;var n=this.OdataModel.getProperty(e).ProductDescription;return n}}});
+//# sourceMappingURL=formatter.js.map
